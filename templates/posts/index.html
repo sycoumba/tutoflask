@@ -1,0 +1,17 @@
+{% extends 'layouts/default.html'%}
+
+{% block body %}
+    
+    <h1>Bienvenue dans Blog</h1>
+
+
+    {% for Post in posts %}
+
+   <article>
+        <h2><a href="/blog/posts/{{Post.id}}">#{{Post.id}}-{{Post.title}}</a></h2>
+        <p>{{Post.content}}</p>
+     </article>
+    <hr>
+    {% endfor %}
+   
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layouts/default.html'%}
+
+{% block body %}
+    
+    <h1>Bienvenue dans Blog</h1>
+
+
+    {% for Post in posts %}
+
+   <article>
+        <h2>{{Post.title}}</h2>
+        <p>{{Post.content}}</p>
+     </article>
+    <hr>
+    {% endfor %}
+   
+{% endblock %}
